@@ -1,4 +1,4 @@
-// File: /home/ajay/ravi/ajay/globe/src/app/layout.tsx
+// File: /home/ajay-singh/Desktop/globe-ajay/Global-House-Activity/globe/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

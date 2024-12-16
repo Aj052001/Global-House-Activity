@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
-import Globe from "react-globe.gl";
+// import Globe from "react-globe.gl";
 import { MessageCircle, Repeat2, Heart } from 'lucide-react'; // For icons in tweet buttons
 import './style.css'
+import Globe from "./ajay.jsx";
 // Function to generate arcs data for the globe
 const generateArcsData = (N) => {
   return [...Array(N).keys()].map(() => ({
@@ -207,7 +208,7 @@ const TwitterFeed = () => {
     return (
       <div
         className="bg-transparent backdrop-blur-md rounded-xl p-8 h-full overflow-x-hidden overflow-y-hidden"
-        style={{ backgroundColor: "#000011", scrollbarColor: "#000011" }}
+        style={{ backgroundColor: "#00001", scrollbarColor: "#000011" }}
       >
         <div className="flex items-center gap-3 mb-6">
           <MessageCircle className="h-6 w-6 text-blue-400" />
@@ -274,9 +275,9 @@ const GlobeWithArcs = () => {
   return (
     <div style={{ display: "flex", height: "75vh" }}>
       {/* Left Section for Globe */}
-      <div style={{ flex: 5, height: "600px", width: "700px", backgroundColor: "#000" }}>
+      <div style={{ flex: 5, height: "555px", width: "700px", backgroundColor: "#000" }}>
       
-        <Globe
+        {/* <Globe
   width={700}
   height={600}
   waitForGlobeReady={false}
@@ -298,11 +299,12 @@ const GlobeWithArcs = () => {
   
   globeRotateSpeed={1} // Rotation speed
   animate={true}  // Enabling animation
-/>
+/> */}
+ <Globe/>
       </div>
 
       {/* Right Section for Tweet Feed */}
-      <div style={{ flex: 5, height: "600px", overflowY: "auto", backgroundColor: "rgb(3 7 18 / var(--tw-bg-opacity, 1))" }}>
+      <div style={{ flex: 5, height: "605px", overflowY: "auto", backgroundColor: "rgb(3 7 18 / var(--tw-bg-opacity, 1))" }}>
         <TwitterFeed /> {/* Display the Twitter feed */}
       </div>
     </div>
